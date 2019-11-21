@@ -1,0 +1,99 @@
+using System;
+
+namespace Bankomaty
+{
+    
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Welcome. Please choose your bank agency: ");
+            Console.WriteLine("Pekao/ Millenium/ Paribas");
+            Console.WriteLine("**************************************************");
+            string bank = Console.ReadLine();
+            if(bank == "Pekao" || bank == "Millenium" || bank == "Paribas")
+            {
+                if(bank == "Pekao")
+                {
+                    Console.WriteLine("You have choosen Pekao agency");
+                }
+                else if(bank == "Millenium" )
+                {
+                    Console.WriteLine("You have choosen Millenium agency");
+                }
+                else if(bank == "Paribas" )
+                {
+                    Console.WriteLine("You have choosen Paribas agency");
+                }
+                Console.WriteLine("Please input your credit card and confirm your PIN code ---> ");
+                string pin = Console.ReadLine();
+                if(pin == "997")
+                {
+                    Console.WriteLine("***************************************************");
+                    Console.WriteLine(" ");
+                    Console.WriteLine("Access Granted");
+                    Console.WriteLine("Withdrawing, press 1");
+                    Console.WriteLine("Deposit, press 2");
+                    Console.WriteLine("Checking your amount of cash, press 3");
+                    Console.WriteLine("Exit, press 4");
+                    string x = Console.ReadLine();
+                    if(x == "1")
+                    {
+                        Console.WriteLine("How much you want withdraw?");
+                        Console.ReadLine();
+                        Console.WriteLine("Take money");
+                        
+                    }
+                    else if (x == "2")
+                    {
+                        Console.WriteLine("Please input your cash then press ENTER");
+                        Console.ReadLine();
+
+                    }
+                    else if (x == "3")
+                    {
+                        Console.WriteLine("997112999.00 PLN");
+                    }
+                    else if(x == "4")
+                    {
+                        Console.WriteLine("Thank you, see you soon!");
+                        
+                    } 
+                                  
+
+
+
+                }
+                else 
+                {
+                    Console.WriteLine("Acces Denied");
+                }
+            }    
+            else
+            {
+                Console.WriteLine("Choosen agency does not exist here");
+            }
+
+            int d = 1;
+            int e = 1;
+            int f = 0;
+            int n, i;
+            Console.WriteLine("Which 'n' of Fibonacci sequence you want?");
+            n = int.Parse(Console.ReadLine());                                           
+            if (n>1)
+            {
+                for(i = 0; i < n-1; i++)                                            
+                {
+                    f = d + e;
+                    d = e;
+                    e = f;
+                }               
+        
+                Console.Write("Result: ");
+                Console.Write(e);
+                Console.ReadKey();
+
+            }
+        }
+    }
+}
